@@ -1,0 +1,43 @@
+.home {
+    .promos {
+        border-radius: 3px;
+        background-color: #ffffff;
+        box-shadow: 0 2px 5px 0 #cbcbcb;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        margin: 0px 12px;
+        position: relative;
+        cursor: pointer;
+        h3 {
+            position: absolute;
+            bottom: -10px;
+            display: none;
+            width: 100%;
+            background: #add8e6bd;
+            color: white;
+            padding: 0;
+            left: -10px;
+            text-align: center;
+            height: 50px;
+            padding-top: 15px;
+        }
+    }
+    .promos:hover {
+        h3 {
+            display: table;
+        }
+    }
+    .container {
+        text-align: center;
+        margin-bottom: 15px;
+        font-size: 14px;
+    }
+    .content {
+        text-align: left;
+        margin-right: 15px;
+    }
+    .content:last-child {
+        margin-right: 0;
+    }
+  }

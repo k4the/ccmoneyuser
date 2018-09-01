@@ -1,0 +1,23 @@
+.fuel table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.fuel td, .fuel th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px 12px;
+  width: 50%;
+}
+
+.fuel tr:nth-child(even) {
+  background-color: #F4F4F4;
+}
+
+tr:hover, tr:nth-child(even):hover {
+  background: #F3F4D5;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}

@@ -1,0 +1,142 @@
+.dummyCard {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.dummyMoreInfo {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  text-align: left;
+  position: relative;
+}
+
+.logo,
+.stars {
+  flex: 1;
+  padding: 0 15px 10px 15px;
+}
+
+.card {
+  border-radius: 3px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px 0 #cbcbcb;
+  padding: 10px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+  margin-bottom: 15px;
+  position: relative;
+  min-height: 100px;
+}
+
+.switchCashbackBut,
+.switchNoCashbackBut,
+.backToTopBut,
+.moreBut {
+  width: 260px;
+  height: 44px;
+  border-radius: 4px;
+  background-color: #f37000;
+  font-family: 'Segoe UI', Frutiger, 'Frutiger Linotype', 'Dejavu Sans', 'Helvetica Neue', 'Helvetica', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.33;
+  letter-spacing: 0.2px;
+  border: none;
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 400;
+  text-shadow: none;
+  box-shadow: none;
+}
+
+.switchNoCashbackBut:hover,
+.backToTopBut:hover {
+  background: #d68742;
+}
+
+.switchCashbackBut {
+  background: #7bc952;
+}
+
+.switchCashbackBut:hover {
+  background: #64a33e;
+}
+
+.moreBut {
+  background: #ccc;
+  width: 100%;
+}
+
+.moreBut:hover {
+  background: grey;
+}
+
+.costMonthly {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.costYearly {
+  padding-bottom: 10px;
+}
+
+.dummyCompany {
+  display: flex;
+  flex-direction: column;
+  padding-right: 15px;
+  flex: 2;
+}
+
+.dummyCost {
+  display: flex;
+  flex-direction: column;
+  padding-right: 15px;
+}
+
+app-star-rating {
+  position: relative;
+  top: 0;
+  right: 0;
+}
+
+.butContainer {
+  padding-top: 0px;
+}
+
+@media only screen and (min-device-width: 768px) and (-webkit-min-device-pixel-ratio: 1) {
+  .card {
+    padding-top: 20px;
+  }
+  .dummyCard {
+    flex-direction: row;
+    text-align: left;
+  }
+  app-star-rating {
+    position: absolute;
+    top: 10px;
+    right: -20px;
+  }
+  .butContainer {
+    padding-top: 20px;
+  }
+  .switchCashbackBut,
+  .switchNoCashbackBut {
+    width: 220px;
+  }
+}
+
+@media only screen and (min-device-width: 960px) and (-webkit-min-device-pixel-ratio: 1) {
+  app-star-rating {
+    position: relative;
+    top: 0;
+    right: 0;
+  }
+  .butContainer {
+    padding-top: 0px;
+  }
+}

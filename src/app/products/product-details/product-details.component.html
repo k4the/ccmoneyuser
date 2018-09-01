@@ -1,0 +1,25 @@
+<div class="productDetails">
+  <div class="moreInfoToggle" (click)="openMoreInfo($event)">
+    <i class="linkIcon fas" [ngClass]="{ 'fa-chevron-down': !moreInfoOpen, 'fa-times-circle': moreInfoOpen }" aria-hidden="true"></i>
+    <span *ngIf="!moreInfoOpen" class="linkText">{{productLabels.moreInformation}}</span>
+    <span *ngIf="moreInfoOpen" class="linkText">{{productLabels.closeInformation}}</span>
+  </div>
+  <div class="detailsContainer">
+    <div class="details" [@slideHeight]="slideDownState">
+      <div class="tab">
+        <button class="tablinks capitalise" (click)="showTab(keys.gas)" [ngClass]="{'active':gasOpen}" *ngIf="product.fuelType === keys.gas || product.fuelType === keys.both">{{keys.gas}}</button>
+        <button class="tablinks capitalise" (click)="showTab(keys.electricity)" [ngClass]="{'active':electricityOpen}" *ngIf="product.fuelType === keys.electricity || product.fuelType === keys.both">{{keys.electricity}}</button>
+      </div>
+      <div *ngIf="product.fuelType === this.keys.gas || product.fuelType === keys.both">
+        <div class="tabcontent gas" *ngIf="gasOpen">
+          <app-fuel [labels]="productLabels" [fuel]="product.gas" [type]="keys.gas"></app-fuel>
+        </div>
+      </div>
+      <div *ngIf="product.fuelType === this.keys.electricity || product.fuelType === keys.both">
+        <div class="tabcontent electricity" *ngIf="electricityOpen">
+          <app-fuel [labels]="productLabels" [fuel]="product.electricity" [type]="keys.electricity"></app-fuel>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

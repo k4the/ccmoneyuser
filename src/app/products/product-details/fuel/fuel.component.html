@@ -1,0 +1,34 @@
+<div class="fuel">
+  <table>
+    <tr>
+      <td>{{ labels.yearlyCost }}</td>
+      <td>
+        &pound;{{fuel.yearlyCost}}
+      </td>
+    </tr>
+    <tr>
+      <td>{{ labels.unitRate }}</td>
+      <td>
+        {{fuel.unitRate}}p
+      </td>
+    </tr>
+    <tr *ngIf="fuel.discountRate > 0">
+      <td>{{ labels.discountRate }}</td>
+      <td>
+        {{fuel.discountRate}}p
+      </td>
+    </tr>
+    <tr *ngIf="fuel.discountRate > 0">
+      <td>{{ labels.standingCharge }}</td>
+      <td>
+        {{ fuel.standingCharge}}p
+      </td>
+    </tr>
+    <tr *ngIf="type === labels.electricity && fuel.economy7 > 0">
+      <td>{{ labels.economy7 }}</td>
+      <td>
+        {{fuel.economy7}}p
+      </td>
+    </tr>
+  </table>
+</div>

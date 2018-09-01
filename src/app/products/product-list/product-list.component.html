@@ -1,0 +1,35 @@
+<div id="overlay" *ngIf="isLoading"></div>
+<app-loading [isLoading]="isLoading"></app-loading>
+<div id="overlay" *ngIf="isLoading"></div>
+<article class="main" *ngIf="!isLoading">
+  <app-loading [isLoading]="isLoading"></app-loading>
+  <div class="card" *ngFor="let product of products | slice:0:limit">
+    <div class="dummyCard">
+      <div class="logo">
+        <img [src]="imageUrl+product.company.logoUrl" [alt]="product.company.name">
+      </div>
+      <div class="dummycompany">
+        <div class="name">{{product.company.name}}</div>
+        <div class="tariffType">{{product.rateType}}</div>
+      </div>
+      <app-star-rating class="stars" [pollRating]="product.company.pollRating"></app-star-rating>
+      <div class="dummyCost">
+        <div class="costMonthly">
+          <span class="pound">&pound;</span>{{product.totalMonthlyCost | number : '1.2-2'}}<span class="monthly">{{productLabels.slashMonthly}}</span>
+        </div>
+        <div class="costYearly">
+          <span class="pound">&pound;</span>{{product.totalYearlyCost |  number : '1.2-2'}}<span class="yearly">{{productLabels.slashYearly}}</span>
+        </div>
+      </div>
+      <div class="butContainer">
+        <button type="button" class="switchCashbackBut">{{productLabels.switch}}</button>
+      </div>
+    </div>
+    <div class="dummyMoreInfo">
+      <app-product-details [product]="product"></app-product-details>
+    </div>
+  </div>
+  <button type="button" (click)="more()" class="moreBut">{{productLabels.more}}</button>
+</article>
+<app-product-modal *ngIf="showSwitch" (productModalResult)="switchProduct($event)" [title]="title" [message]="message" [type]="type"
+  [id]="productToSwitchId"></app-product-modal>

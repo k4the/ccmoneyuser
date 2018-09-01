@@ -1,0 +1,39 @@
+.tab {
+    overflow: hidden;
+    button {
+        border: none;
+        outline: none;
+        cursor: pointer;
+        color: black;
+        background: lightgrey;
+        border: 1px solid #ccc;
+        width: 100px;
+        border-radius: 0;
+        height: auto;
+    }
+    button:hover {
+        color: grey;
+        background: white;
+    }
+    button.active {
+        background: white;
+        border-bottom: white 1px solid;
+    }
+}
+
+.tabcontent {
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.detailsContainer {
+    overflow: hidden;
+    position: relative;
+    height: auto;
+}
+
+.details {
+    width: 100%;
+    position: absolute;
+    z-index: 100;
+}

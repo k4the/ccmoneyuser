@@ -1,0 +1,7 @@
+<header>
+ <i class="fas fa-bars" id="navBut" (click)="toggleMenu($event)"></i>
+  <nav [@slideDown]="slideDownState">
+    <a class="navItem" routerLink="/" routerLinkActive="active" (click)="gotoPage('/')" [routerLinkActiveOptions]="{exact: true}">Home</a>
+    <a class="navItem" routerLink="/products" routerLinkActive="active" (click)="gotoPage('/products')"[routerLinkActiveOptions]="{exact: true}">Products</a>
+  </nav>
+</header>

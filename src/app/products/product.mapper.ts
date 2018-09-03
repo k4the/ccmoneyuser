@@ -45,6 +45,10 @@ export class ProductMapper {
 
   mapPollRatingFromJson(json: any): PollRating {
     const pollRating = {
+      great: json.great ? json.great : 0,
+      ok: json.ok ? json.ok : 0,
+      poor: json.poor ? json.poor : 0,
+      starClass: json.starClass ? json.starClass : null,
       greatPercentage: json.greatPercentage ? json.greatPercentage : 0,
       okPercentage: json.okPercentage ? json.okPercentage : 0,
       poorPercentage: json.poorPercentage ? json.poorPercentage : 0,

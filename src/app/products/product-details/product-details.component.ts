@@ -46,7 +46,7 @@ export class ProductDetailsComponent implements OnInit {
     }
   }
 
-  openMoreInfo(): void {
+  openMoreInfo(event: any): void {
     this.moreInfoOpen = !this.moreInfoOpen;
     (this.slideDownState === 'closed') ? this.slideDownState = 'open' : this.slideDownState = 'closed';
     console.log('in', this.slideDownState)

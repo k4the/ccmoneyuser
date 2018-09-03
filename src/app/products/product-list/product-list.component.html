@@ -12,7 +12,7 @@
         <div class="name">{{product.company.name}}</div>
         <div class="tariffType">{{product.rateType}}</div>
       </div>
-      <app-star-rating class="stars" [pollRating]="product.company.pollRating"></app-star-rating>
+      <app-star-rating class="stars" [starClass]="product.company.pollRating.starClass"></app-star-rating>
       <div class="dummyCost">
         <div class="costMonthly">
           <span class="pound">&pound;</span>{{product.totalMonthlyCost | number : '1.2-2'}}<span class="monthly">{{productLabels.slashMonthly}}</span>

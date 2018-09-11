@@ -1,83 +1,125 @@
 header {
-    max-width: 990px;
+    max-width: 100%;
     margin: 0 auto;
-    padding-top: 10px;
     padding-bottom: 22px;
-}
-
-#navBut {
-    display: block;
-    position: fixed;
-    top: 8px;
-    left: 10px;
-    z-index: 10;
-    font-size: 28px;
-}
-
-nav {
-    padding: 0;
-    text-align: center;
-    width: 100%;
-    background: white;
-    height: 100px;
-    margin: 0;
-    margin-top: 0px;
-    position: fixed;
-    left: 0;
-    top: -100px;
-    z-index: 3;
-    background: white;
-}
-
-.navItem,
-.navItem:visited {
-    background: white;
-    padding: 14px 10px;
-    color: darkgray;
-    font-size: 14px;
-    text-decoration: none;
-    cursor: pointer;
-    border-bottom: 1px solid lightgrey;
-    height: 50px;
-    display: table;
-    text-align: center;
-    width: 100%;
-    text-transform: uppercase;
-}
-
-.navItem:hover,
-.navItem.active {
-    color: darkslategrey;
+    overflow: hidden;
+    position: relative;
+    height: 60px;
+    .subLink {
+        display: block;
+    }
+    #logo,
+    #menu,
+    .icon {
+        display: block;
+        position: absolute;
+        top: 8px;
+        z-index: 10;
+        font-size: 28px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        color: #7A5691;
+    }
+    #menu {
+        left: 10px;
+        position: fixed;
+    }
+    #logo {
+        left: 10px;
+        color: #7A5691;
+        text-align: left;
+        display: none;
+    }
+    .fas {
+        font-size: 26px;
+    }
+    #menu:hover,
+    .navItem.home:hover,
+    .navItem.home.active,
+    .icon:hover,
+    .icon.active {
+        border-bottom: none;
+    }
+    .icon {
+        right: 10px;
+    }
+    nav {
+        padding: 0;
+        text-align: center;
+        width: 100%;
+        height: 500px;
+        margin: 15px 0 10px 0;
+        position: fixed;
+        left: 0;
+        top: -500px;
+        z-index: 10;
+        background: white;
+    }
+    .navItemContainer {
+        display: table;
+    }
+    .navItem,
+    .navItem:visited {
+        padding: 14px 10px;
+        color: #7A5691;
+        font-size: 14px;
+        text-decoration: none;
+        cursor: pointer;
+        border-bottom: 1px solid lightgrey;
+        height: 50px;
+        display: table-cell;
+        text-align: center;
+        width: 100%;
+        text-transform: uppercase;
+    }
+    .navItem:hover,
+    .navItem.active {
+        color: darkslategrey;
+    }
+    .subMenuHeader {
+        background: lightgrey;
+        color: white;
+    }
 }
 
 @media only screen and (min-device-width: 768px) and (-webkit-min-device-pixel-ratio: 1) {
     header {
-        padding-bottom: 10px;
-    }
-    #navBut {
-        display: none;
-    }
-    nav {
-        text-align: left;
-        height: auto;
-        margin-top: 20px;
-        position: relative;
-        left: 0;
-        top: 0;
-    }
-    .navItem {
-        display: inline-block;
-        padding: 6px 0;
-        border-bottom: none;
-        height: auto;
-        text-align: left;
-        width: auto;
-        margin: 0 10px;
-    }
-    .navItem.active,
-    .navItem:hover {
-        border-bottom: 2px solid darkslategray;
+        padding-top: 15px;
+        height: 60px;
+        border-bottom: #7A5691 1px solid;
+        #logo {
+            display: block;
+        }
+        .subLink {
+            display: none;
+        }
+        #menu {
+            display: none;
+        }
+        nav {
+            text-align: left;
+            height: auto;
+            margin-top: 0;
+            position: relative;
+            left: 0;
+            top: 0;
+            background: none;
+        }
+        .navItem {
+            display: inline-block;
+            padding: 6px 0 0 0;
+            border-bottom: none;
+            height: auto;
+            text-align: left;
+            width: auto;
+            margin: 0 10px;
+        }
+        .navItem.active,
+        .navItem:hover {
+            border-bottom: 2px solid darkslategray;
+        }
+        .navItem.home {
+            display: none;
+        }
     }
 }
-
-@media only screen and (min-device-width: 960px) and (-webkit-min-device-pixel-ratio: 1) {}

@@ -7,8 +7,12 @@ export const Keys = {
   delete: 'delete',
   danger: 'danger',
   ok: 'ok',
+  save: 'save',
   warning: 'warning',
-  cancel: 'cancel'
+  cancel: 'cancel',
+  currentCompany: 'currentCompany',
+  bigCompany: 'bigCompany',
+  none: 'none'
 };
 
 export const ErrorMessages = {

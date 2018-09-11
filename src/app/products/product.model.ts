@@ -1,3 +1,4 @@
+import { YearlyMonthly } from './../customers/yearly-monthly.model';
 import { Company } from './company.model';
 import { Fuel } from './fuel.model';
 
@@ -15,9 +16,11 @@ export class Product {
   fixedFor: number;
   paymentMethod: string;
   message: string;
+  endDate: Date;
   company: Company;
   gas: Fuel;
   electricity: Fuel;
+  saving: YearlyMonthly;
 
   constructor(product: Product) {
     this.id = product.id ? product.id : null;
@@ -33,8 +36,10 @@ export class Product {
     this.fixedFor = product.fixedFor;
     this.paymentMethod = product.paymentMethod;
     this.message = product.message;
+    this.endDate = product.endDate;
     this.company = product.company ? new Company(product.company) : null;
     this.gas = product.gas ? new Fuel(product.gas) : null;
     this.electricity = product.electricity ? new Fuel(product.electricity) : null;
+    this.saving = product.saving ? new YearlyMonthly(product.saving) : null;
   }
 }

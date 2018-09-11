@@ -1,3 +1,9 @@
+.sideBar {
+  width: 200px;
+  float: left;
+  height: 400px;
+}
+
 .dummyCard {
   display: flex;
   flex-direction: column;
@@ -24,7 +30,6 @@
   box-shadow: 0 2px 5px 0 #cbcbcb;
   padding: 10px;
   font-size: 14px;
-  margin-bottom: 10px;
   text-align: center;
   border: 1px solid #ddd;
   margin-bottom: 15px;

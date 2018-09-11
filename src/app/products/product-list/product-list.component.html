@@ -1,8 +1,7 @@
 <div id="overlay" *ngIf="isLoading"></div>
-<app-loading [isLoading]="isLoading"></app-loading>
+<app-cc-loading [isLoading]="isLoading"></app-cc-loading>
 <div id="overlay" *ngIf="isLoading"></div>
-<article class="main" *ngIf="!isLoading">
-  <app-loading [isLoading]="isLoading"></app-loading>
+<div class="nine90" *ngIf="!isLoading">
   <div class="card" *ngFor="let product of products | slice:0:limit">
     <div class="dummyCard">
       <div class="logo">
@@ -30,6 +29,6 @@
     </div>
   </div>
   <button type="button" (click)="more()" class="moreBut">{{productLabels.more}}</button>
-</article>
-<app-product-modal *ngIf="showSwitch" (productModalResult)="switchProduct($event)" [title]="title" [message]="message" [type]="type"
-  [id]="productToSwitchId"></app-product-modal>
+</div>
+<app-cc-modal *ngIf="showSwitch" (productModalResult)="switchProduct($event)" [title]="title" [message]="message" [type]="type"
+  [id]="productToSwitchId"></app-cc-modal>

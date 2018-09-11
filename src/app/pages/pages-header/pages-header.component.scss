@@ -1,0 +1,37 @@
+.pagesHeader {
+    display: none;
+}
+
+@media only screen and (min-device-width: 768px) and (-webkit-min-device-pixel-ratio: 1) {
+    .pagesHeader {
+        padding-bottom: 10px;
+        display: block;
+        nav {
+            text-align: left;
+            height: auto;
+            margin: 10px 0;
+            position: relative;
+            left: 0;
+            top: 0;
+            background: none;
+        }
+        .navItem {
+            display: inline-block;
+            padding: 6px 0 0 0;
+            border-bottom: none;
+            height: auto;
+            text-align: left;
+            width: auto;
+            margin: 0 10px;
+            text-decoration: none;
+            text-transform: capitalize;
+            color: darkgray;
+            cursor: pointer;
+        }
+        .navItem:hover,
+        .navItem.active {
+            color: darkslategrey;
+            border-bottom: 2px solid darkslategray;
+        }
+    }
+}

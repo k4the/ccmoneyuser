@@ -1,4 +1,27 @@
 .home {
+  .bigBg {
+    background: #7A5691;
+    color: white;
+    height: 400px;
+    width: 100%;
+    text-align: center;
+    padding-top: 60px;
+
+    h1, h2, h3, h4 {
+      margin: 0;
+    }
+
+    .homeResultsButContainer {
+      padding-top: 40px;
+    }
+
+    .homeResultsBut {
+      width: 360px;
+      height: 100px;
+      background: white;
+      color: #7A5691;
+    }
+  }
     .promos {
         border-radius: 3px;
         background-color: #ffffff;
@@ -35,7 +58,7 @@
     }
     .content {
         text-align: left;
-        margin-right: 15px;
+        padding: 15px;
     }
     .content:last-child {
         margin-right: 0;

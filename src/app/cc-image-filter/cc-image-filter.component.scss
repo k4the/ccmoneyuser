@@ -1,0 +1,55 @@
+.ccImageFilter {
+    width: 300px;
+    height: 260px;
+    margin-right: 0;
+    position: relative;
+    font-family: 'Open Sans', Arial, sans-serif;
+    text-align: left;
+    .header {
+        background: #EBF0F2;
+        color: white;
+        padding: 4px 10px;
+    }
+    .header.selected {
+      background: #00AEEF;
+      .icon {
+        color: white;
+      }
+    }
+    .content {
+        padding: 6px 12px;
+        position: relative;
+    }
+    .icon {
+        position: absolute;
+        left: 10px;
+        font-size: 26px;
+        top: 12px;
+        cursor: pointer;
+    }
+    .heading {
+        font-size: 14px;
+        position: relative;
+        width: 87%;
+        display: inline-block;
+        margin-left: 35px;
+    }
+    .message {
+        position: relative;
+        bottom: 0;
+    }
+    textarea {
+        position: absolute;
+        bottom: -130px;
+    }
+}
+
+.ccImageFilter.card {
+    padding: 0;
+}
+
+@media only screen and (min-device-width: 768px) and (-webkit-min-device-pixel-ratio: 1) {
+    .ccImageFilter {
+        margin-right: 15px;
+    }
+}

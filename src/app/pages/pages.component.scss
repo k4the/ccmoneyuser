@@ -1,0 +1,25 @@
+.page {
+    padding: 15px 10px;
+    width: 100%;
+    text-align: center;
+    .imageFilter {
+        display: flex;
+        flex-direction: column;
+    }
+    h1,
+    h4 {
+        margin: 10px 0;
+    }
+    .cancel {
+        margin-right: 10px;
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (-webkit-min-device-pixel-ratio: 1) {
+    .page {
+        padding: 0 10px;
+        .imageFilter {
+            flex-direction: row;
+        }
+    }
+}

@@ -1,7 +1,6 @@
+import { slideHeight } from './../../animations/slide-height.animation';
 import { ProductLabels } from './../products.constants';
-import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
-import { slideHeight } from '../../animations/slideHeight';
-import { slideDown } from '../../animations/slideDown';
+import { Component, OnInit, Input } from '@angular/core';
 import { Product } from '../product.model';
 import { Keys } from '../../global.constants';
 
@@ -11,7 +10,6 @@ import { Keys } from '../../global.constants';
   styleUrls: ['./product-details.component.scss'],
   animations: [
     slideHeight
-    // slideDown
   ]
 })
 export class ProductDetailsComponent implements OnInit {
@@ -46,10 +44,12 @@ export class ProductDetailsComponent implements OnInit {
     }
   }
 
-  openMoreInfo(event: any): void {
+  animationDone($event: any): void {
     this.moreInfoOpen = !this.moreInfoOpen;
+  }
+
+  openMoreInfo(event: any): void {
     (this.slideDownState === 'closed') ? this.slideDownState = 'open' : this.slideDownState = 'closed';
-    console.log('in', this.slideDownState)
   }
 
 }

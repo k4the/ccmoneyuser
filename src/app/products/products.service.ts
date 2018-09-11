@@ -21,11 +21,9 @@ export class ProductsService {
             return 1;
         return 0;
     });
-
     if (order === 'DESC') {
       products.reverse();
     }
-    console.log(products)
   }
 
   getProducts(): Observable<Product[]> {

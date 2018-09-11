@@ -1,10 +1,9 @@
 <div class="home">
-  <h1>Lorem ipsum dolor</h1>
-  <h2>Duis aute irure dolor in reprehenderit</h2>
-  <div class="container">
-    <div class="flex1 promos" *ngFor="let item of items">
-      <img [src]="imageUrl+item.imageUrl" [alt]="item.alt" class="responsive" />
-      <h3>{{ item.heading }}</h3>
+  <div class="bigBg">
+    <h1>Lorem ipsum dolor</h1>
+    <h2>Duis aute irure dolor in reprehenderit</h2>
+    <div class="homeResultsButContainer">
+      <button type="button" class="homeResultsBut" (click)="gotoPage()">Get stuff</button>
     </div>
   </div>
   <div class="container">
@@ -13,15 +12,5 @@
       Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip commodo consequat. Duis
       irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
     </p>
-    <p class="content flex1">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-      irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-    </p>
-    <p class="content flex1">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip commodo consequat. Duis
-        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-      </p>
   </div>
 </div>

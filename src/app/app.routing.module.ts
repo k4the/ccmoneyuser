@@ -5,7 +5,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'products', loadChildren: './products/products.module#ProductsModule'},
+  { path: 'results', loadChildren: './products/products.module#ProductsModule'},
   { path: '**', component: PageNotFoundComponent }
 ];
 

@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { Product } from '../product.model';
 import { ProductsService } from '../products.service';
 import { environment } from '../../../environments/environment';
+import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-product-list',
@@ -77,7 +78,7 @@ export class ProductListComponent implements OnInit {
 
   openSwitchModal(product: Product): void {
     this.title = this.productLabels.deleteProduct;
-    this.message = this.productMessages.sorrySwitch + ' ' + product.name;
+    this.message = 'Sorry ' + product.name;
     this.type = this.keys.warning;
     this.productToSwitchId = product.id;
     this.showSwitch = true;

@@ -9,8 +9,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { AppRoutingModule } from './app.routing.module';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { CcModalModule } from './cc-modal/cc-modal.module';
-import { CcLoadingModule } from './cc-loading/cc-loading.module';
+// import { CcModalModule } from './cc-modal/cc-modal.module';
+// import { CcLoadingModule } from './cc-loading/cc-loading.module';
 
 @NgModule({
   declarations: [
@@ -24,8 +24,8 @@ import { CcLoadingModule } from './cc-loading/cc-loading.module';
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
-    CcModalModule,
-    CcLoadingModule
+    // CcModalModule,
+    // CcLoadingModule
   ],
   providers: [
     ProductMapper,

@@ -1,3 +1,4 @@
+import { ProductListModule } from './product-list/product-list.module';
 import { StarRatingModule } from './star-rating/star-rating.module';
 import { FuelModule } from './product-details/fuel/fuel.module';
 import { ProductDetailsModule } from './product-details/product-details.module';
@@ -8,7 +9,6 @@ import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { ProductListComponent } from './product-list/product-list.component';
 import { ProductsRoutingModule } from './products-routing.module';
 import { ProductsFilterPipe} from './products-filter.pipe';
 
@@ -22,11 +22,11 @@ import { ProductsFilterPipe} from './products-filter.pipe';
     CcLoadingModule,
     ProductDetailsModule,
     FuelModule,
-    StarRatingModule
+    StarRatingModule,
+    ProductListModule
 ,
 FuelModule  ],
   declarations: [
-    ProductListComponent,
     ProductsFilterPipe
   ],
   providers: [ProductMapper]
